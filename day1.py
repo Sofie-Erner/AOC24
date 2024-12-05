@@ -9,3 +9,10 @@ list2 = np.sort(df["L2"].to_numpy())
 dist = [ abs(list1[i] - list2[i]) for i in range(len(list1)) ]
 
 print(sum(dist))
+print()
+print("-----")
+print()
+
+simSco = [ l1 * np.count_nonzero(list2 == l1) for l1 in list1 ]
+
+print(sum(simSco))
